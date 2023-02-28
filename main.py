@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import random
 from PIL import Image, ImageTk
+from image_path import *
 
 # Create a view with Tkinter
 BACKGROUND_COLOR = "white"
@@ -25,11 +26,11 @@ remaining_life = MAX_LIFE
 life_list = []
 
 # Prep Images
-start_image = tk.PhotoImage(file = r"image\start.png")
-correct_image = tk.PhotoImage(file = r"image\correct.png")
-boo_image = tk.PhotoImage(file = r"image\boo.png")
-gameover_image = tk.PhotoImage(file = r"image\crying.png")
-ball_image = tk.PhotoImage(file = r"image\ball.png")
+start_image = tk.PhotoImage(file = start_image_path)
+correct_image = tk.PhotoImage(file = correct_image_path)
+boo_image = tk.PhotoImage(file = boo_image_path)
+gameover_image = tk.PhotoImage(file = gameover_image_path)
+ball_image = tk.PhotoImage(file = ball_image_path)
 start_resized_image = start_image.subsample(6, 6)
 correct_resized_image = correct_image.subsample(6, 6)
 boo_resized_image = boo_image.subsample(6, 6)
