@@ -14,7 +14,7 @@ question = None
 score = 0
 
 # Level Settings
-seconds = 10
+seconds = 60
 arithmatic_choice = ["+","-"]
 min_num = 10
 max_num = 40
@@ -87,7 +87,9 @@ def type_event(event):
     global score
     result=text_entry.get(1.0, tk.END+"-1c")
     answer = question.get_answer()
-    if int(result) == answer:
+    if result == "":
+        pass
+    elif int(result) == answer:
         countdown.reset_countdown()
         text_entry.delete("1.0","end")
         score += 1
